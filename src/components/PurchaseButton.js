@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from './elements/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import Button from "./elements/Button";
 
 const PurchaseButton = ({ purchased, onPurchaseClick }) => {
-  if (!purchased) {
+  if (purchased) {
     return <p className="text-muted">Purchased!</p>;
   }
 

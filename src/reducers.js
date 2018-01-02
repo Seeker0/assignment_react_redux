@@ -48,9 +48,9 @@ function groceries(state = [], action) {
               .reverse()
           : state;
     case FILTER_GROCERY:
-      return action.data.filter === "purchased"
+      return action.data.filter === "SHOW_PURCHASED"
         ? state.filter(obj => obj.purchased)
-        : action.data.filter === "not purchased"
+        : action.data.filter === "SHOW_NOT_PURCHASED"
           ? state.state.filter(obj => !obj.purchased)
           : state;
     default:

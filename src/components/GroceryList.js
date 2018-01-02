@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import GroceryItem from './GroceryItem';
-import Filters from './Filters';
+import React from "react";
+import PropTypes from "prop-types";
+import GroceryItem from "./GroceryItem";
+import Filters from "./Filters";
 
-const GroceryList = ({ items, purchaseItem }) => {
+const GroceryList = ({ items, purchaseGrocery }) => {
   // Generate the puppy card for each puppy
   const groceryList = items.map(item => (
     <GroceryItem
       item={item}
       key={item.id}
-      onPurchaseClick={() => purchaseItem(item.id)}
+      onPurchaseClick={() => purchaseGrocery(item.id)}
     />
   ));
   const noItems = <p className="text-muted">Oops no items...</p>;
@@ -28,7 +28,7 @@ const GroceryList = ({ items, purchaseItem }) => {
 
 GroceryList.propTypes = {
   items: PropTypes.array.isRequired,
-  purchaseItem: PropTypes.func.isRequired
+  purchaseGrocery: PropTypes.func.isRequired
 };
 
 export default GroceryList;
