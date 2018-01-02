@@ -1,12 +1,13 @@
-import React, { PropTypes } from "react";
-import Input from "./elements/Input";
-import InputGroup from "./elements/InputGroup";
-import Button from "./elements/Button";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Input from './elements/Input';
+import InputGroup from './elements/InputGroup';
+import Button from './elements/Button';
 
 const AddGrocery = ({ onSubmit }) => (
   <form className="container" onSubmit={onSubmit}>
     <h1>
-      Add a Grocery Item{" "}
+      Add a Grocery Item{' '}
       <span className="glyphicon glyphicon-search" aria-hidden="true" />
     </h1>
     <InputGroup name="name" labelText="Name">

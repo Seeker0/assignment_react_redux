@@ -1,6 +1,7 @@
-import React, { PropTypes } from "react";
-import GroceryItem from "./GroceryItem";
-//import Filters from './Filters'
+import React from 'react';
+import PropTypes from 'prop-types';
+import GroceryItem from './GroceryItem';
+import Filters from './Filters';
 
 const GroceryList = ({ items, purchaseItem }) => {
   // Generate the puppy card for each puppy
@@ -17,7 +18,7 @@ const GroceryList = ({ items, purchaseItem }) => {
   return (
     <div className="GroceryList container">
       <h1>Grocery Items</h1>
-      {/* <Filters /> */}
+      <Filters />
       <div className="card-deck">
         {items.length > 0 ? groceryList : noItems}
       </div>
@@ -25,10 +26,9 @@ const GroceryList = ({ items, purchaseItem }) => {
   );
 };
 
-ItemList.propTypes = {
+GroceryList.propTypes = {
   items: PropTypes.array.isRequired,
   purchaseItem: PropTypes.func.isRequired
 };
 
 export default GroceryList;
-

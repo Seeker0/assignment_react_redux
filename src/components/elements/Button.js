@@ -1,25 +1,21 @@
-import React, {PropTypes} from 'react'
-
-const Button = (props) => {
-  const {size, color, children, type, ...rest} = props
-  const sizeClass = size ? `btn-${size}` : ''
+import React from 'react';
+import PropTypes from 'prop-types';
+const Button = props => {
+  const { size, color, children, type, ...rest } = props;
+  const sizeClass = size ? `btn-${size}` : '';
 
   return (
-    <button
-      type={type}
-      className={`btn btn-${color} ${sizeClass}`}
-      {...rest}
-    >
+    <button type={type} className={`btn btn-${color} ${sizeClass}`} {...rest}>
       {children}
     </button>
-  )
-}
+  );
+};
 
 Button.defaultProps = {
   type: 'button',
   color: 'default',
-  children: 'Submit',
-}
+  children: 'Submit'
+};
 
 // Set PropTypes for Button
 Button.propTypes = {
@@ -31,7 +27,7 @@ Button.propTypes = {
   // be rendered (like a string, element, number, etc.)
   children: PropTypes.node.isRequired,
   // type is optional, but it must be a string
-  type: PropTypes.string,
-}
+  type: PropTypes.string
+};
 
-export default Button
+export default Button;

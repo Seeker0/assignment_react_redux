@@ -1,13 +1,14 @@
-import React, { PropTypes } from "react";
-import Button from "./elements/Button";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from './elements/Button';
 
-const PurchaseButton = ({ available, onPurchaseClick }) => {
+const PurchaseButton = ({ purchased, onPurchaseClick }) => {
   if (!purchased) {
     return <p className="text-muted">Purchased!</p>;
   }
 
   return (
-    <Button onClick={onAdoptClick} color="success">
+    <Button onClick={onPurchaseClick} color="success">
       Purchase!
     </Button>
   );
@@ -19,4 +20,3 @@ PurchaseButton.propTypes = {
 };
 
 export default PurchaseButton;
-
