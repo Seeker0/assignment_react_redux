@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import GroceryItem from "./GroceryItem";
-import Filters from "./Filters";
+import React from 'react';
+import PropTypes from 'prop-types';
+import GroceryItem from './GroceryItem';
+import Filters from './Filters';
 
 const GroceryList = ({ items, purchaseGrocery }) => {
   // Generate the puppy card for each puppy
@@ -17,7 +17,6 @@ const GroceryList = ({ items, purchaseGrocery }) => {
   // Using Bootstrap 4 card layout
   return (
     <div className="GroceryList container">
-      <h1>Grocery Items</h1>
       <Filters />
       <div className="card-deck">
         {items.length > 0 ? groceryList : noItems}
